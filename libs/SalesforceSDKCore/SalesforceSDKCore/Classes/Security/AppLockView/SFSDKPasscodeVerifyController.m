@@ -297,10 +297,11 @@ NSUInteger const kSFMaxNumberofAttempts = 10;
             [self accessibilityAnnounce:passcodeFailedString];
             [self layoutSubviews];
             
-            if (![self.navigationItem.leftBarButtonItem isEnabled]) {
-                [self.navigationItem.leftBarButtonItem setEnabled:YES];
-                [self.navigationItem.leftBarButtonItem setTintColor:self.viewConfig.logoutButtonColor];
-            }
+            // Commented out to remove the Logout Button on the PIN screen
+            // if (![self.navigationItem.leftBarButtonItem isEnabled]) {
+            //     [self.navigationItem.leftBarButtonItem setEnabled:YES];
+            //     [self.navigationItem.leftBarButtonItem setTintColor:self.viewConfig.logoutButtonColor];
+            // }
             [self.view setNeedsDisplay];
         }
     }
