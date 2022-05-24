@@ -218,6 +218,7 @@ public class KeyGenerator: NSObject {
         if result.success {
             return key
         } else {
+            SalesforceLogger.log(KeyGenerator.self, level: .error, message: "Error writing \(storedLabel) to keychain: \(result.error?.localizedDescription ?? "")")
             throw KeyGeneratorError.keychainWriteError(underlyingError: result.error)
         }
         // END MODIFIED
@@ -242,6 +243,17 @@ public class KeyGenerator: NSObject {
         removeECKeyPair(privateTag: privateTag, publicTag: publicTag)
         return try createECKeyPair(privateTag: privateTag, publicTag: publicTag)
     }
+    
+    // BEGIN MODIFIED
+    static func keyTag(name: String, prefix: String) throws -> Data {
+        let tagString = "\(prefix).\(name)"
+        if let tag = tagString.data(using: .utf8) {
+            return tag
+        } else {
+            throw KeyGeneratorError.tagCreationFailed
+        }
+    }
+    // END MODIFIED
     
     // static func ecKey(tag: Data) -> SecKey? { // ORIGINAL
     static func ecKey(tag: Data) throws -> SecKey? { // MODIFIED
