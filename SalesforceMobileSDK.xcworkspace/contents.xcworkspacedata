@@ -32,12 +32,12 @@
       <FileRef
          location = "group:libs/SalesforceSDKCore/SalesforceSDKCore.xcodeproj">
       </FileRef>
-      <FileRef
+      <!-- <FileRef
          location = "group:libs/SmartStore/SmartStore.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:libs/MobileSync/MobileSync.xcodeproj">
-      </FileRef>
+      </FileRef> -->
    </Group>
    <Group
       location = "container:"

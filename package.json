@@ -23,8 +23,6 @@
     "files": [
         "SalesforceAnalytics.podspec",
 	    "SalesforceSDKCore.podspec",
-	    "SmartStore.podspec",
-        "MobileSync.podspec",
         "SalesforceReact.podspec",
         "libs",
         "shared/resources",

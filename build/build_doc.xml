@@ -4,7 +4,8 @@
     <property name="simulatorBuildName" value="iphonesimulator" />
     <property name="thirdPartyLibDir" location="../external/ThirdPartyDependencies" />
     
-    <target name="all" description="Cleans the doc folders and builds docs for all Salesforce-specific iOS libraries" depends="commonDoc, analyticsDoc, coreDoc, smartStoreDoc, mobileSyncDoc">
+    <!-- <target name="all" description="Cleans the doc folders and builds docs for all Salesforce-specific iOS libraries" depends="commonDoc, analyticsDoc, coreDoc, smartStoreDoc, mobileSyncDoc"> -->
+    <target name="all" description="Cleans the doc folders and builds docs for all Salesforce-specific iOS libraries" depends="commonDoc, analyticsDoc, coreDoc">
     </target>
 
     <target name="commonDoc">
@@ -37,7 +38,7 @@
         </antcall>
     </target>
     
-    <target name="smartStoreDoc">
+    <!-- <target name="smartStoreDoc">
         <antcall target="clean">
             <param name="buildConfiguration" value="SmartStore" />
         </antcall>
@@ -45,9 +46,9 @@
             <param name="PROJECT_DIR" value="../libs" />
             <param name="PROJECT_NAME" value="SmartStore" />
         </antcall>
-    </target>
+    </target> -->
     
-    <target name="mobileSyncDoc">
+    <!-- <target name="mobileSyncDoc">
         <antcall target="clean">
             <param name="buildConfiguration" value="MobileSync" />
         </antcall>
@@ -55,7 +56,7 @@
             <param name="PROJECT_DIR" value="../libs" />
             <param name="PROJECT_NAME" value="MobileSync" />
         </antcall>
-    </target>
+    </target> -->
 
     <target name="clean">
         <property name="baseBuildOutputDir" value="${artifactsDir}/doc/${buildConfiguration}" />

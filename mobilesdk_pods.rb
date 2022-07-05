@@ -26,8 +26,8 @@ def use_mobile_sdk! (options={})
   pod 'SalesforceSDKCommon', :path => path
   pod 'SalesforceAnalytics', :path => path
   pod 'SalesforceSDKCore', :path => path
-  pod 'SmartStore', :path => path
-  pod 'MobileSync', :path => path
+  # pod 'SmartStore', :path => path
+  # pod 'MobileSync', :path => path
 end
 
 # Post Install processing for signposts

@@ -103,7 +103,8 @@ workflows:
       - run-tests:
           matrix:
             parameters:
-              lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore", "SmartStore", "MobileSync"]
+              lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore"]
+              # lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore", "SmartStore", "MobileSync"]
           filters:
             branches:
               only:
@@ -128,7 +129,8 @@ workflows:
           name: test << matrix.lib >> iOS << matrix.ios >> 
           matrix:
             parameters:
-              lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore", "SmartStore", "MobileSync"]
+              lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore"]
+              # lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore", "SmartStore", "MobileSync"]
               nightly-test: [true]
               ios: [*min-ios]
               device: ["iPhone 8"]
@@ -136,7 +138,8 @@ workflows:
           name: test << matrix.lib >> iOS << matrix.ios >> 
           matrix:
             parameters:
-              lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore", "SmartStore", "MobileSync"]
+              lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore"]
+              # lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore", "SmartStore", "MobileSync"]
               nightly-test: [true]
               ios: [*latest-ios]
           requires:
@@ -145,7 +148,8 @@ workflows:
           name: test << matrix.lib >> beta iOS << matrix.ios >> 
           matrix:
             parameters:
-              lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore", "SmartStore", "MobileSync"]
+              lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore"]
+              # lib: ["SalesforceSDKCommon", "SalesforceAnalytics", "SalesforceSDKCore", "SmartStore", "MobileSync"]
               nightly-test: [true]
               ios: [*beta-ios]
               env: [mac-beta]
